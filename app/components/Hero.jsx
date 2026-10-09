@@ -106,7 +106,7 @@ export default function Hero() {
                 <div className="flex items-center justify-center md:justify-end  ">
                     
 
-                    <Image src="/Hero.png" alt="hero img" width={280} height={280} className="hero-picture h-auto w-full max-w-[220px] mix-blend-multiply sm:max-w-[270px]" />
+                    <Image src="/hero.png" alt="hero img" width={280} height={280} className="hero-picture h-auto w-full max-w-[220px] mix-blend-multiply sm:max-w-[270px]" />
                     
         
                 </div>
