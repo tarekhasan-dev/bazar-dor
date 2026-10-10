@@ -39,9 +39,10 @@ export default function  CategoryNav() {
             try {
                 
                 
-                const response = await fetch("https://api.api-store.workers.dev/api/bazardor/categories");
+                // const response = await fetch("https://api.api-store.workers.dev/api/bazardor/categories");
 
 
+                const response = await fetch("/api/categories");
 
                 if (!response.ok) {
 

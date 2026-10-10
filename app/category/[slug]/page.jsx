@@ -53,7 +53,10 @@ function CategoryContent() {
 
             try {
 
-                const categoryResponse = await fetch("https://api.api-store.workers.dev/api/bazardor/categories");
+                // const categoryResponse = await fetch("https://api.api-store.workers.dev/api/bazardor/categories");
+
+
+                const categoryResponse = await fetch("/api/categories");
 
 
 
