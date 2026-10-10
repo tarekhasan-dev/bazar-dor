@@ -39,7 +39,7 @@ export default function Hero() {
     
     return (
 
-        <section className="mt-8  rounded-2xl bg-green-50 px-6 py-10  sm:px-10  ">
+        <section className="mt-8  rounded-2xl bg-green-50 px-6 py-11  sm:px-12  ">
 
 
             <div className=" grid items-center gap-8 md:grid-cols-2 ">

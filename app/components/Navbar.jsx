@@ -4,11 +4,24 @@
 
 import Link from "next/link";
 
+
+import CategoryNav from "./CategoryNav";
+
+
+
 // import { ShoppingCart } from "lucide-react";
 
 import { ShoppingCart } from "lucide-react";
 
 import { useEffect, useState } from "react";
+
+
+
+
+
+
+
+
 
 export default function Navbar() {
 
@@ -48,7 +61,7 @@ export default function Navbar() {
 
         <header className="border-b border-gray-200 bg-white">
 
-            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 pt-[50px] pb-5">
 
 
                 <div>
@@ -95,7 +108,14 @@ export default function Navbar() {
  
             </div>
 
+            <CategoryNav />
+
+
+
+            
+
         </header>
+
 
     );
 

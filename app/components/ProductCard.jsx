@@ -39,7 +39,9 @@ export default function ProductCard({ product }) {
 
     return (
 
-        <Link href={`/product/${product.slug}`} className="group block rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg motion-reduce:transform-none motion-reduce:transition-none">
+        // <Link href={`/product/${product.slug}`} className="group block rounded-2xl border border-gray-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg motion-reduce:transform-none motion-reduce:transition-none">
+
+        <Link href={`/product/${product.slug}`} className="group block rounded-2xl border border-green-200 bg-gray-100 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:bg-green-100 hover:shadow-lg motion-reduce:transform-none motion-reduce:transition-none">
 
             <div className="flex items-center gap-4 ">      
            
