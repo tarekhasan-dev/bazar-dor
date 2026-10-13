@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
 
     }; 
 
-    let changeColor = "bg-gray-100 text-gray-600"; 
+    let changeColor = "bg-[#F8FBF5] text-gray-600"; 
     let changeIcon = "—";
 
     if (product.change.dir === "up") {

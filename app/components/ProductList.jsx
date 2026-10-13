@@ -101,9 +101,19 @@ export default function ProductList() {
 
             <section>
 
-                <h2 className="text-2xl font-bold text-green-700">
+                <h2 className="text-2xl font-bold text-black-700">
 
-                    আজ দাম বেড়েছে ▲
+                  
+                    
+                    <span className="text-red-600">
+
+                        ▲
+                    
+                    </span>
+
+
+                    আজ দাম বেড়েছে
+                    
                     
 
 
@@ -130,10 +140,17 @@ export default function ProductList() {
 
             <section>
 
-                <h2 className="text-2xl font-bold text-red-700 ">
+                <h2 className="text-2xl font-bold text-black-700 ">
                     
+                           
+                    <span className="text-green-600">
 
-                    আজ দাম কমেছে ▼
+                        ▼
+                    
+                    </span>
+
+
+                     আজ দাম কমেছে
 
                 </h2>
 

@@ -5,8 +5,9 @@
 import Link from "next/link";
 
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+
+import { Suspense, useState } from "react";
 
 
 import toast from "react-hot-toast";
@@ -18,11 +19,14 @@ import { authClient } from "@/lib/auth-client";
 
 
 
-export default function SignInPage() {
+function SignInForm() {
     
 
 
     const router = useRouter();
+
+
+    const searchParams = useSearchParams();
 
 
     const [email, setEmail] = useState("");
@@ -32,6 +36,27 @@ export default function SignInPage() {
 
 
     const [loading, setLoading] = useState(false);
+
+
+
+
+    function getRedirectUrl() {
+
+
+        const callbackUrl = searchParams.get("callbackUrl");
+
+
+        if (callbackUrl && callbackUrl.startsWith("/") && !callbackUrl.startsWith("//")) {
+
+            return callbackUrl;
+
+        }
+
+
+        return "/";
+
+
+    }
 
 
 
@@ -88,9 +113,11 @@ export default function SignInPage() {
             }
 
 
+
             toast.success("সাইন ইন সফল হয়েছে।");
 
-            router.push("/");
+
+            router.replace(getRedirectUrl());
 
             
 
@@ -131,7 +158,7 @@ export default function SignInPage() {
 
                 provider,
 
-                callbackURL: "/",
+                callbackURL: getRedirectUrl(),
 
 
 
@@ -401,5 +428,47 @@ export default function SignInPage() {
         
 
     );
+
+}
+
+
+export default function SignInPage() {
+
+
+    return ( 
+
+
+
+
+        <Suspense fallback={
+
+            <main className="min-h-screen bg-[#F0F6F1] px-4 pt-5 pb-8">
+
+                    <div className="mx-auto w-full max-w-[460px]">
+
+                    <p className="text-center text-sm text-gray-600">
+
+
+
+                        সাইন ইন পেজ লোড হচ্ছে…
+
+                    </p>
+
+                </div>
+
+
+
+                
+
+            </main>
+
+        }>
+
+            <SignInForm />
+
+        </Suspense>
+
+    );
+
 
 }

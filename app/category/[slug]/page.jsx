@@ -220,33 +220,44 @@ function CategoryContent() {
                         </div>
 
 
-                        <div className="mt-6 flex justify-end rounded-2xl border border-gray-200 bg-green-50 px-3 py-2">
+                        <div className="mt-6 flex justify-end rounded-2xl border border-gray-200 bg-green-50 px-3 py-3">
 
-                            <label className="flex items-center gap-2 text-sm text-[#FF7F50]">
+                            <label className="flex items-center gap-2 text-sm font-bold text-green-600">
 
                                 সাজান
 
                                 <div className="relative">
 
-                                    <select value={sortBy} onChange={(event) => setSortBy(event.target.value)} className="appearance-none rounded-lg border border-gray-300 bg-white py-2 pl-3 pr-9 text-sm text-[#FF7F50]">
+                                
+                                    <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}
+                                    className="appearance-none rounded-full border border-gray-300 bg-white py-2 pl-3 pr-9 text-sm font-bold text-red-600 cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500" >
 
-                                        <option value="default">
+                                                    <option value="default" className="bg-white text-red-600">
+                                                        
 
-                                            ডিফল্ট
+                                                        ডিফল্ট
+                                                        
 
-                                        </option>
+                                                    </option>
+                                                    
 
-                                        <option value="low">
+                                                    <option value="low" className="bg-white text-gray-800">
+                                                        
 
-                                            দাম: কম থেকে বেশি
+                                                        দাম: কম থেকে বেশি
+                                                        
 
-                                        </option>
+                                                    </option>
+                                                    
 
-                                        <option value="high">
+                                                    <option value="high" className="bg-white text-gray-800">
+                                                        
 
-                                            দাম: বেশি থেকে কম
+                                                        দাম: বেশি থেকে কম
+                                                        
 
-                                        </option>
+                                                    </option>
+                                                    
 
                                     </select>
 

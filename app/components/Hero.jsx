@@ -1,10 +1,20 @@
 "use client";
 
 // import { Montaga } from "next/font/google";
-import Image from "next/image";
+// import Image from "next/image";
 
 
 import { useEffect, useState } from "react";
+
+import dynamic from "next/dynamic";
+
+import cartAnimation from "@/public/grocery-cart.json";
+
+ const Lottie = dynamic(() => import("lottie-react"), {
+    ssr: false,
+ }
+ 
+ );
 
 export default function Hero() {
 
@@ -106,7 +116,13 @@ export default function Hero() {
                 <div className="flex items-center justify-center md:justify-end  ">
                     
 
-                    <Image src="/hero.png" alt="hero img" width={280} height={280} className="hero-picture h-auto w-full max-w-[220px] mix-blend-multiply sm:max-w-[270px]" />
+                   
+                    <div className="hero-picture w-full max-w-[300px] sm:max-w-[300px]">
+                        
+                        <Lottie animationData={cartAnimation} loop={true} />
+                        
+                    </div>
+                    
                     
         
                 </div>
